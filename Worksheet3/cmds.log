@@ -1,0 +1,20 @@
+  977  ls
+  980  mkdir Worksheet3
+  981  cd Worksheet3/
+  982  ls
+  983  touch ws3.txt
+  984  wget https://raw.githubusercontent.com/khanchandaniashish/CS131/main/Global%20YouTube%20Statistics.csv
+  985  ls
+  986  nano Global\ YouTube\ Statistics.csv 
+  987  sort -t ',' -k 16 -n -r 'Global YouTube Statistics.csv' | grep -E 'United State' | head -n 1 > ws3.txt
+  988  cat ws3.txt 
+  990  sort -t ',' -k 16 -n -r 'Global YouTube Statistics.csv' | grep -E 'United Kingdom' | head -n 1 >> ws3.txt 
+  991  sort -t ',' -k 16 -n -r 'Global YouTube Statistics.csv' | grep -E 'India' | head -n 1 >> ws3.txt
+  992  nano ws3.txt 
+  993  sort -t ',' -k 3 -n -r 'Global YouTube Statistics.csv' | grep -E 'Sports' | head -n 1
+  994  sort -t ',' -k 3 -n -r 'Global YouTube Statistics.csv' | grep -E 'Sports' | head -n 1 >> ws3.txt 
+  995  sort -t ',' -k 3 -n -r 'Global YouTube Statistics.csv' | grep -E 'Education' | head -n 1 >> ws3.txt 
+  996  sort -t ',' -k 3 -n -r 'Global YouTube Statistics.csv' | grep -E 'Entertainment' | head -n 1 >> ws3.txt
+  997  nano ws3.txt 
+  998  cmds.log
+  999  history > cmds.log
