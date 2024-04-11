@@ -1,0 +1,89 @@
+Script started on 2024-04-11 01:10:21-04:00
+
+bash-4.4$ 
+bash-4.4$ 
+bash-4.4$ ^V[Knano ~/.bashrc
+[?1049h[22;0;0t[1;43r(B[m[4l[?7h[39;49m[?1h=[?1h=[?1h=[?25l[39;49m(B[m[H[2J[41;48H(B[0;7m[ Reading File ](B[m[41;54H(B[0;7m 3 lines ](B[m[H(B[0;7m  GNU nano 2.9.8 [17b/mnt/scratch/FA23_CS131_Ashish/yelinsp24/.bashrc [27b [1;110H(B[m[42d(B[0;7m^G(B[m Get Help    (B[0;7m^O(B[m Write Out   (B[0;7m^W(B[m Where Is    (B[0;7m^K(B[m Cut Text    (B[0;7m^J(B[m Justify     (B[0;7m^C(B[m Cur Pos     (B[0;7mM-U(B[m Undo[43d(B[0;7m^X(B[m Exit[43;16H(B[0;7m^R(B[m Read File   (B[0;7m^\(B[m Replace     (B[0;7m^U(B[m Uncut Text  (B[0;7m^T(B[m To Spell    (B[0;7m^_(B[m Go To Line  (B[0;7mM-E(B[m Redo[41d[3d[39;49m(B[malias l='ls -ltr'[4dalias w='ls -l | wc -l'[A[?12l[?25h[?25l[41d[J[43;111H[?12l[?25h[43;1H[?1049l[23;0;0t[?1l>bash-4.4$ source ~/.bashrc
+bash-4.4$ l
+total 196
+-rw-rw-r-- 1 yelinsp24 yelinsp24 200279 Apr 11 00:00 'Global YouTube Statistics.csv'
+-rw-rw-r-- 1 yelinsp24 yelinsp24      0 Apr 11 01:10  ws4.txt
+bash-4.4$ w
+3
+bash-4.4$ wget https://raw.githubusercontent.com/khanchandaniashish/CS131/main/Global%20YouTube%20Statistics.csvv
+--2024-04-11 01:12:00--  https://raw.githubusercontent.com/khanchandaniashish/CS131/main/Global%20YouTube%20Statistics.csv
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 185.199.111.133, 185.199.109.133, 185.199.110.133, ...
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|185.199.111.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 200279 (196K) [text/plain]
+Saving to: 'Global YouTube Statistics.csv.1'
+
+Global YouTube Statistics.c   0%[                                           ]       0  --.-KB/s               Global YouTube Statistics.c 100%[==========================================>] 195.58K  --.-KB/s    in 0.009s  
+
+2024-04-11 01:12:00 (20.1 MB/s) - 'Global YouTube Statistics.csv.1' saved [200279/200279]
+
+bash-4.4$ mkdir -p ~/Worksheet4/Subscribers
+bash-4.4$ grep "United States" ~/Worksheet4/Global\ YouTube\ Statistics.csv | cut -d ',' -f 4 | cut -d ' ' -f 1  > ~/Worksheet4/Subscribers/United_States.txt
+grep: /mnt/scratch/FA23_CS131_Ashish/yelinsp24/Worksheet4/Global YouTube Statistics.csv: No such file or directory
+bash-4.4$ ls
+'Global YouTube Statistics.csv'  'Global YouTube Statistics.csv.1'   ws4.txt
+bash-4.4$ lsgrep "United States" ~/Worksheet4/Global\ YouTube\ Statistics.csv | cut -d ',' -f 4 | cut -d ' ' -f 1  > ~/Worksheet4/Subscribers/United_States.txt[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C/Global\ YouTube\ Statistics.csv | cut -d ',' -f 4 | cut -d ' ' -f 1 >[1P ~/Worksheet4/Subscribers/United_States.txt[A/Global\ YouTube\ Statistics.csv | cut -d ',' -f 4 | cut -d ' ' -f 1 > [1P~/Worksheet4/Subscribers/United_States.txt[A/Global\ YouTube\ Statistics.csv | cut -d ',' -f 4 | cut -d ' ' -f 1 > ~[1P/Worksheet4/Subscribers/United_States.txt[A/Global\ YouTube\ Statistics.csv | cut -d ',' -f 4 | cut -d ' ' -f 1 > ~/[1PWorksheet4/Subscribers/United_States.txt[A/Global\ YouTube\ Statistics.csv | cut -d ',' -f 4 | cut -d ' ' -f 1 > ~/W[1Porksheet4/Subscribers/United_States.txt[A/Global\ YouTube\ Statistics.csv | cut -d ',' -f 4 | cut -d ' ' -f 1 > ~/Wo[1Prksheet4/Subscribers/United_States.txt[A/Global\ YouTube\ Statistics.csv | cut -d ',' -f 4 | cut -d ' ' -f 1 > ~/Wor[1Pksheet4/Subscribers/United_States.txt[A/Global\ YouTube\ Statistics.csv | cut -d ',' -f 4 | cut -d ' ' -f 1 > ~/Work[1Psheet4/Subscribers/United_States.txt[A/Global\ YouTube\ Statistics.csv | cut -d ',' -f 4 | cut -d ' ' -f 1 > ~/Works[1Pheet4/Subscribers/United_States.txt[A/Global\ YouTube\ Statistics.csv | cut -d ',' -f 4 | cut -d ' ' -f 1 > ~/Worksh[1Peet4/Subscribers/United_States.txt[AGlobal\ YouTube\ Statistics.csv | cut -d ',' -f 4 | cut -d ' ' -f 1 > ~/Workshe[C[1Pt4/Subscribers/United_States.txt[A
+
+grep: /mnt/scratch/FA23_CS131_Ashish/yelinsp24/Global YouTube Statistics.csv: No such file or directory
+bash-4.4$ [Kbash-4.4$ [Kbash-4.4$ [Kbash-4.4$ [Kbash-4.4$ [Kbash-4.4$ [Kbash-4.4$ [Kbash-4.4$ [Kbash-4.4$ [Kbash-4.4$ [Kbash-4.4$ [Kbash-4.4$ [Kbash-4.4$ [Kbash-4.4$ [Kbash-4.4$ [Kbash-4.4$ [Kbash-4.4$ [Kbash-4.4$ [Kbash-4.4$ [Kbash-4.4$ [Kbash-4.4$ [Kbash-4.4$ [Kbash-4.4$ [Kbash-4.4$ [Kbash-4.4$ [Kbash-4.4$ [Kbash-4.4$ [Kbash-4.4$ pwd
+/mnt/scratch/FA23_CS131_Ashish/yelinsp24/workspace_new/Worksheet4
+bash-4.4$ cd ..
+bash-4.4$ cd ..[2Ppwdgrep "United States" ~/Global\ YouTube\ Statistics.csv | cut -d ',' -f 4 | cut -d ' ' -f 1 > ~/Worksheet4/Subscribers/United_States.txt[C[C[C[C[C[C[C[C[C[Cls[Kgrep "United States" ~/Worksheet4/Global\ YouTube\ Statistics.csv | cut -d ',' -f 4 | cut -d ' ' -f 1 > ~/Worksheet4/Subscribers/United_States.txt
+grep: /mnt/scratch/FA23_CS131_Ashish/yelinsp24/Worksheet4/Global YouTube Statistics.csv: No such file or directory
+bash-4.4$ [Kbash-4.4$ [Kbash-4.4$ [Kbash-4.4$ [Kbash-4.4$ [Kbash-4.4$ [Kbash-4.4$ [Kbash-4.4$ [Kbash-4.4$ [Kbash-4.4$ [Kbash-4.4$ [Kbash-4.4$ [Kbash-4.4$ [Kbash-4.4$ [Kbash-4.4$ [Kbash-4.4$ [Kbash-4.4$ [Kbash-4.4$ [Kbash-4.4$ [Kbash-4.4$ [Kbash-4.4$ [Kbash-4.4$ [Kbash-4.4$ [Kbash-4.4$ [Kbash-4.4$ [Kbash-4.4$ [Kbash-4.4$ [Kbash-4.4$ [Kbash-4.4$ [Kbash-4.4$ [Kbash-4.4$ 
+bash-4.4$ 
+bash-4.4$ 
+bash-4.4$ 
+bash-4.4$ ls
+Assignment2  Worksheet3  Worksheet4
+bash-4.4$ cd Worksheet4
+bash-4.4$ cd Worksheet4[C[C[C[C[C[C[C[C[C[Cls[Kgrep "United States" ~/Worksheet4/Global\ YouTube\ Statistics.csv | cut -d ',' -f 4 | cut -d ' ' -f 1 > ~/Worksheet4/Subscribers/United_States.txt[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P/Subscribers/United_States.txt[1P/Subscribers/United_States.txt[1P/Subscribers/United_States.txt[1P/Subscribers/United_States.txt[1P/Subscribers/United_States.txt[1P/Subscribers/United_States.txt[1P/Subscribers/United_States.txt[1P/Subscribers/United_States.txt[1P/Subscribers/United_States.txt[1P/Subscribers/United_States.txt[1PSubscribers/United_States.txt[1P/Subscribers/United_States.txt
+bash: /Subscribers/United_States.txt: No such file or directory
+grep: /Global YouTube Statistics.csv: No such file or directory
+bash-4.4$ grep "United States" /Global\ YouTube\ Statistics.csv | cut -d ',' -f 4 | cut -d ' ' -f 1 > /Subscribers/United_States.txt[C[1PSubscribers/United_States.txt[1P
+bash: Subscribers/United_States.txt: No such file or directory
+bash-4.4$ ls
+'Global YouTube Statistics.csv'  'Global YouTube Statistics.csv.1'   ws4.txt
+bash-4.4$ mkdir -p ~/Worksheet4/Subscribers
+bash-4.4$ mkdir -p ~/Worksheet4/Subscribers[C[C[C[C[C[C[C[C[C[Cls[K[C
+'Global YouTube Statistics.csv'  'Global YouTube Statistics.csv.1'   ws4.txt
+bash-4.4$ lsmkdir -p ~/Worksheet4/Subscribers[C[C[C[C[C[C[C[C[C[C[1PSubscribers[1PSubscribers[1PSubscribers[1PSubscribers[1PSubscribers[1PSubscribers[1PSubscribers[1PSubscribers[1PSubscribers[1PSubscribers[1PSubscribers[1PSubscribers[1PSubscribers[1PSubscribers[1PSubscribers[1PSubscribers
+bash-4.4$ mkdir Subscribers[C[C[C[C[C[C[C[C[C[Cls[Kmkdir -p ~/Worksheet4/Subscribers[C[C[C[C[C[C[C[C[C[Cls[Kgrep "United States" Global\ YouTube\ Statistics.csv | cut -d ',' -f 4 | cut -d ' ' -f 1 > Subscribers/United_States.txt
+bash-4.4$ ls
+'Global YouTube Statistics.csv'  'Global YouTube Statistics.csv.1'   Subscribers   ws4.txt
+bash-4.4$ cd Subscribers/
+bash-4.4$ ls
+United_States.txt
+bash-4.4$ nano United_States.txt 
+[?1049h[22;0;0t[1;63r(B[m[4l[?7h[39;49m[?1h=[?1h=[?1h=[?25l[39;49m(B[m[H[2J[61;94H(B[0;7m[ Reading File ](B[m[61;93H(B[0;7m[ Read 313 lines ](B[m[H(B[0;7m  GNU nano 2.9.8 [79bUnited_States.txt [88b [1;202H(B[m[62d(B[0;7m^G(B[m Get Help     (B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut Text     (B[0;7m^J(B[m Justify	(B[0;7m^C(B[m Cur Pos	(B[0;7mM-U(B[m Undo[62;113H(B[0;7mM-A(B[m Mark Text   (B[0;7mM-](B[m To Bracket  (B[0;7m^B(B[m Back[62;161H(B[0;7m^Left(B[m Prev Word (B[0;7m^A(B[m Home[63d(B[0;7m^X(B[m Exit[63;17H(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace	(B[0;7m^U(B[m Uncut Text   (B[0;7m^T(B[m To Spell     (B[0;7m^_(B[m Go To Line   (B[0;7mM-E(B[m Redo[63;113H(B[0;7mM-6(B[m Copy Text   (B[0;7mM-W(B[m WhereIs Next(B[0;7m^F(B[m Forward	(B[0;7m^Right(B[m Next Word(B[0;7m^E(B[m End[61d[3d[39;49m(B[m0[4d28368841870[5d1.64E+11[6d93247040539[7d77180169894[8d77428473662[9d0[10d38843229963[11d16241549158[12d59316472754[13d27073872856[14d14696003229[15d29884657286[16d24004842608[17d9877365274[18d13626331061[19d27286058807[20d25458952022[21d24519022988[22d19547696190[23d39450824833[24d10507474316[25d7339333120[26d13598903820[27d22756581750[28d22731415608[29d23510152352[30d18208196857[31d19378155425[32d22553923546[33d3010784935[34d20297931219[35d55299840198[36d25607397308[37d23492684419[38d13013567335[39d26355088167[40d28516250629[41d21031745531[42d2930015381[43d11615848291[44d26583873105[45d17111726160[46d16793072362[47d12355992466[48d14037426379[49d17999961915[50d13546549817[51d15199330166[52d22593193994[53d17208027242[54d14727238483[55d9956764048[56d14412474625[57d4552581106[58d13379395501[59d10336420490[60d22440611155[3d[?12l[?25h[?25l[61d[J[63;203H[?12l[?25h[63;1H[?1049l[23;0;0t[?1l>bash-4.4$ cd ..
+bash-4.4$ ls
+'Global YouTube Statistics.csv'  'Global YouTube Statistics.csv.1'   Subscribers   ws4.txt
+bash-4.4$ cut -d ',' -f 4 ~/Worksheet4/Global_YouTube_Statistics.csv | grep "India" | cut -d ' ' -f 1 > ~/Worksheet4/Subscribers/India.txt
+cut: /mnt/scratch/FA23_CS131_Ashish/yelinsp24/Worksheet4/Global_YouTube_Statistics.csv: No such file or directory
+bash-4.4$ cut -d ',' -f 4 ~/Worksheet4/Global_YouTube_Statistics.csv | grep "India" | cut -d ' ' -f 1 > ~/Worksheet4/Subscribers/India.txt[C[C[C[C[C[C[C[C[C[Cls[Kcd ..[3Pls[K[K
+bash-4.4$ 
+bash-4.4$ 
+bash-4.4$ 
+bash-4.4$ 
+bash-4.4$ cut -d ',' -f 4 ~/Worksheet4/Global_YouTube_Statistics.csv | grep "India" | cut -d ' ' -f 1 > ~/Worksheet4/Subscribers/India.txt[C[C[C[C[C[C[C[C[C[Cls[K[K[Kcut -d ',' -f 4 Global_YouTube_Statistics.csv | grep "India" | cut -d ' ' -f 1 > Subscribers/India.txt
+cut: Global_YouTube_Statistics.csv: No such file or directory
+bash-4.4$ grep "India" Global\ YouTube\ Statistics.csv | cut -d ',' -f 4 | cut -d ' ' -f 1 > Subscribers/India.txt
+bash-4.4$ subscribers_us=$(paste -sd+ Subscribers/United_States.txt | bc)
+bash-4.4$ count_us=$(wc -l < Subscribers/United_States.txt)
+bash-4.4$ mean_us=$(echo "scale=2; $subscribers_us / $count_us" | bc)
+bash-4.4$ 
+bash-4.4$ echo $mean_us > Subscribers/US_Mean.txt
+bash-4.4$ subscribers_india=$(paste -sd+ Subscribers/India.txt | bc)
+bash-4.4$ count_india=$(wc -l < Subscribers/India.txt)
+bash-4.4$ mean_india=$(echo "scale=2; $subscribers_india / $count_india" | bc)
+bash-4.4$ echo $mean_india > Subscribers/India_Mean.txt
+bash-4.4$ echo "Mean subscribers for United States: $mean_us" > ws4_means.txt
+bash-4.4$ echo "Mean subscribers for India: $mean_india" >> ws4_means.txt
+bash-4.4$ exit
+
+Script done on 2024-04-11 01:26:13-04:00
