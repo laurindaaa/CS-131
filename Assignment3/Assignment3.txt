@@ -1,0 +1,183 @@
+Task 1:
+
+Command(s) used to solve:
+1. get the number of lines in last.fake before filtering
+
+Output of Command: 
+507 last.fake
+
+Command(s) used to solve:
+1. get the number of lines in last.fake after filtering
+
+Output of Command:
+478 lastsp24.fake
+
+
+
+
+
+Task 2
+Command(s) used to solve:
+Find all the usernames that logged in on a Sunday from the lastsp24.fake file.
+
+Output of Command:
+The list of people who worked on Sunday are:
+aayushsp24
+akashsp24
+billysp24
+breannasp24
+briansp24
+chih-kuosp24
+fnusp24
+gavinsp24
+megansp24
+michellesp24
+swansp24
+xuebosp24
+Kudos to these people for putting in the work
+
+
+
+
+Task 3
+Command(s) used to solve:
+Find all the night owls from the lastsp24.fake file.
+
+Output of Command:
+Night Owls List:
+aarushisp24
+aayushsp24
+breannasp24
+gavinsp24
+gradysp24
+ronsp24
+sheelsp24
+xuebosp24
+zakisp24
+Night Owls are dope. Please ensure you get enough sleep though.
+
+
+
+
+
+
+Task 4
+Command(s) used to solve:Find all the Early Birds from the lastsp24.fake file.
+
+Output of Command:
+Early Birds List:
+ajaysp24
+ericsp24
+Early Birds are dope. Please ensure you get enough sleep though.
+
+
+
+
+
+
+
+
+Task 5
+Command(s) used to solve:Display the users having a username that starts with "t"
+
+
+Output of Command:
+
+tylersp24
+tylersp24
+tylersp24
+tylersp24
+tylersp24
+tylersp24
+tylersp24
+tylermsp24
+tylermsp24
+tylermsp24
+tylermsp24
+tylermsp24
+tylermsp24
+tylermsp24
+tylermsp24
+taliasp24
+taliasp24
+taliasp24
+taliasp24
+taliasp24
+taliasp24
+taliasp24
+taliasp24
+taliasp24
+taliasp24
+tylersp24
+tylermsp24
+tylermsp24
+tylermsp24
+tylersp24
+tanishasp24
+tylersp24
+tylersp24
+tylersp24
+tylermsp24
+tylersp24
+tylersp24
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Task 6
+Command(s) used to solve:Use awk on the passwd.fake file to find all users that have usernames starting with 'a' and have UID divisble by 2.
+
+
+Output of Command:
+
+angie23fa
+areebah23fa
+apple23fa
+ajay23fa
+alan23fa
+amreenf23
+acesp24
+akashsp24
+ayesp24
+alexsp24
+aayushsp24
+ajaysp24
+ashish
+amansp24
+
+
+
+
+
+
+
+
+
+
+Task 7
+Command(s) used to solve:Use sed on passwd.fake to Display all the distinct lines left in passwd.fake after deleting all letters and digits and spaces.
+
+
+Output of Command:
+-::::-:/://
+-:::::///-://
+-:::::///__/-://
+-:::::/://
+::::-:///://
+:::::///://
+:::::///_/://
+:::::///__/://
+::::://://
+:::::/://
+
