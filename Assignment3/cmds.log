@@ -1,0 +1,232 @@
+Last login: Thu Apr 11 01:08:26 2024 from 172.29.96.102
+[yelinsp24@sjsu ~]$ ls
+Worksheet1  cs131.        index.html.2   two.txt     workspace3
+Worksheet4  index.html    one.txt        workspace   workspace4
+cs131       index.html.1  sampleProject  workspace2  workspace_new
+[yelinsp24@sjsu ~]$ cd workspace_new
+[yelinsp24@sjsu workspace_new]$ ls
+Assignment2  Worksheet3  Worksheet4
+[yelinsp24@sjsu workspace_new]$ mkdir Assignment3
+[yelinsp24@sjsu workspace_new]$ cd Assignment3
+[yelinsp24@sjsu Assignment3]$ wget https://raw.githubusercontent.com/khanchandaniashish/CS131/main/awksp24/last.fake
+--2024-04-19 17:19:08--  https://raw.githubusercontent.com/khanchandaniashish/CS131/main/awksp24/last.fake
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 185.199.110.133, 185.199.108.133, 185.199.109.133, ...
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|185.199.110.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 37629 (37K) [text/plain]
+Saving to: 'last.fake'
+
+last.fake           100%[===================>]  36.75K  --.-KB/s    in 0.003s  
+
+2024-04-19 17:19:08 (10.6 MB/s) - 'last.fake' saved [37629/37629]
+
+[yelinsp24@sjsu Assignment3]$ 
+[yelinsp24@sjsu Assignment3]$ wget https://raw.githubusercontent.com/khanchandaniashish/CS131/main/awksp24/passwd.fake
+--2024-04-19 17:19:17--  https://raw.githubusercontent.com/khanchandaniashish/CS131/main/awksp24/passwd.fake
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 185.199.110.133, 185.199.109.133, 185.199.108.133, ...
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|185.199.110.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 15987 (16K) [text/plain]
+Saving to: 'passwd.fake'
+
+passwd.fake         100%[===================>]  15.61K  --.-KB/s    in 0.001s  
+
+2024-04-19 17:19:17 (26.2 MB/s) - 'passwd.fake' saved [15987/15987]
+
+[yelinsp24@sjsu Assignment3]$ 
+[yelinsp24@sjsu Assignment3]$ wget https://raw.githubusercontent.com/khanchandaniashish/CS131/main/awksp24/ps.fake
+--2024-04-19 17:19:21--  https://raw.githubusercontent.com/khanchandaniashish/CS131/main/awksp24/ps.fake
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 185.199.110.133, 185.199.111.133, 185.199.108.133, ...
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|185.199.110.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 229045 (224K) [text/plain]
+Saving to: 'ps.fake'
+
+ps.fake             100%[===================>] 223.68K  --.-KB/s    in 0.01s   
+
+2024-04-19 17:19:22 (20.9 MB/s) - 'ps.fake' saved [229045/229045]
+
+[yelinsp24@sjsu Assignment3]$ 
+[yelinsp24@sjsu Assignment3]$ wc -l last.fake
+507 last.fake
+[yelinsp24@sjsu Assignment3]$ grep 'sp24' last.fake > lastsp24.fake
+[yelinsp24@sjsu Assignment3]$ wc -l lastsp24.fake
+478 lastsp24.fake
+[yelinsp24@sjsu Assignment3]$ grep 'Sun' lastsp24.fake | awk '{print $1}' | sort | uniq
+aayushsp24
+akashsp24
+billysp24
+breannasp24
+briansp24
+chih-kuosp24
+fnusp24
+gavinsp24
+megansp24
+michellesp24
+swansp24
+xuebosp24
+[yelinsp24@sjsu Assignment3]$ grep 'Sun' lastsp24.fake | awk '{print $1}' | sort | uniq | awk 'BEGIN { printf "The list of people who worked on Sunday are:\n" } { printf "%s\n", $0 } END { printf "Kudos to these people for putting in the work\n" }'
+The list of people who worked on Sunday are:
+aayushsp24
+akashsp24
+billysp24
+breannasp24
+briansp24
+chih-kuosp24
+fnusp24
+gavinsp24
+megansp24
+michellesp24
+swansp24
+xuebosp24
+Kudos to these people for putting in the work
+[yelinsp24@sjsu Assignment3]$ awk '$NF ~ /00:0[0-4]/ || $NF ~ /23:/ {print $1}' lastsp24.fake | sort | uniq
+aarushisp24
+ajaysp24
+akashsp24
+albertsp24
+alexsp24
+amansp24
+athishsp24
+billysp24
+brandonsp24
+breannasp24
+connersp24
+daosp24
+edisonsp24
+farihasp24
+fnusp24
+gavinsp24
+georgesp24
+gradysp24
+jadonsp24
+jessesp24
+kobesp24
+madhavsp24
+megansp24
+nicholsonsp24
+ronsp24
+sheelsp24
+swansp24
+taliasp24
+tylermsp24
+tylersp24
+vaikuntamsp24
+[yelinsp24@sjsu Assignment3]$ awk '$6 ~ /11:|12:|01:|02:|03:|04:/ {print $1}' lastsp24.fake | sort | uniq | awk 'BEGIN { printf "Night Owls List:\n" } { printf "%s\n", $0 } END { printf "Night Owls are dope. Please ensure you get enough sleep though.\n" }'
+Night Owls List:
+aarushisp24
+aayushsp24
+breannasp24
+gavinsp24
+gradysp24
+ronsp24
+sheelsp24
+xuebosp24
+zakisp24
+Night Owls are dope. Please ensure you get enough sleep though.
+[yelinsp24@sjsu Assignment3]$ awk '$6 ~ /0[5-9]:/ {print $1}' lastsp24.fake | sort | uniq | awk 'BEGIN { printf "Early Birds List:\n" } { printf "%s\n", $0 } END { printf "Early Birds are dope. Please ensure you get enough sleep though.\n" }'
+Early Birds List:
+ajaysp24
+ericsp24
+Early Birds are dope. Please ensure you get enough sleep though.
+[yelinsp24@sjsu Assignment3]$ awk '$1 ~ /^t/ {print $1}' lastsp24.fake
+tylersp24
+tylersp24
+tylersp24
+tylersp24
+tylersp24
+tylersp24
+tylersp24
+tylermsp24
+tylermsp24
+tylermsp24
+tylermsp24
+tylermsp24
+tylermsp24
+tylermsp24
+tylermsp24
+taliasp24
+taliasp24
+taliasp24
+taliasp24
+taliasp24
+taliasp24
+taliasp24
+taliasp24
+taliasp24
+taliasp24
+tylersp24
+tylermsp24
+tylermsp24
+tylermsp24
+tylersp24
+tanishasp24
+tylersp24
+tylersp24
+tylersp24
+tylermsp24
+tylersp24
+tylersp24
+[yelinsp24@sjsu Assignment3]$ awk -F: '$1 ~ /^a/ && $3 % 2 == 0 {print $1}' passwd.fake
+angie23fa
+areebah23fa
+apple23fa
+ajay23fa
+alan23fa
+amreenf23
+acesp24
+akashsp24
+ayesp24
+alexsp24
+aayushsp24
+ajaysp24
+ashish
+amansp24
+[yelinsp24@sjsu Assignment3]$ sed 's/[[:alpha:][:digit:] ]//g' passwd.fake | sort -u
+-::::-:/://
+-:::::///-://
+-:::::///__/-://
+-:::::/://
+::::-:///://
+:::::///://
+:::::///_/://
+:::::///__/://
+::::://://
+:::::/://
+[yelinsp24@sjsu Assignment3]$ sed 's/[[:alpha:][:digit:] ]//g' passwd.fake | sort -u
+-::::-:/://
+-:::::///-://
+-:::::///__/-://
+-:::::/://
+::::-:///://
+:::::///://
+:::::///_/://
+:::::///__/://
+::::://://
+:::::/://
+[yelinsp24@sjsu Assignment3]$ sed 's/[[:alpha:][:digit:] ]//g' passwd.fake | grep -v '^$' | sort -u
+-::::-:/://
+-:::::///-://
+-:::::///__/-://
+-:::::/://
+::::-:///://
+:::::///://
+:::::///_/://
+:::::///__/://
+::::://://
+:::::/://
+[yelinsp24@sjsu Assignment3]$ touch cmds.log
+[yelinsp24@sjsu Assignment3]$ touch "Assignment3.txt"
+[yelinsp24@sjsu Assignment3]$ wc -l last.fake >> Assignment3.txt
+[yelinsp24@sjsu Assignment3]$ grep 'sp24' last.fake > lastsp24.fake
+[yelinsp24@sjsu Assignment3]$ wc -l lastsp24.fake >> Assignment3.txt
+[yelinsp24@sjsu Assignment3]$ grep 'Sun' lastsp24.fake | awk '{print $1}' | sort | uniq | awk 'BEGIN { printf "The list of people who worked on Sunday are:\n" } { printf "%s\n", $0 } END { printf "Kudos to these people for putting in the work\n" }' >> Assignment3.txt
+[yelinsp24@sjsu Assignment3]$ awk '$6 ~ /11:|12:|01:|02:|03:|04:/ {print $1}' lastsp24.fake | sort | uniq | awk 'BEGIN { printf "Night Owls List:\n" } { printf "%s\n", $0 } END { printf "Night Owls are dope. Please ensure you get enough sleep though.\n" }' >> Assignment3.txt
+[yelinsp24@sjsu Assignment3]$ awk '$6 ~ /0[5-9]:/ {print $1}' lastsp24.fake | sort | uniq | awk 'BEGIN { printf "Early Birds List:\n" } { printf "%s\n", $0 } END { printf "Early Birds are dope. Please ensure you get enough sleep though.\n" }' >> Assignment3.txt
+[yelinsp24@sjsu Assignment3]$ awk '$1 ~ /^t/ {print $1}' lastsp24.fake >> Assignment3.txt
+[yelinsp24@sjsu Assignment3]$ awk -F: '$1 ~ /^a/ && $3 % 2 == 0 {print $1}' passwd.fake >> Assignment3.txt
+[yelinsp24@sjsu Assignment3]$ sed 's/[[:alpha:][:digit:] ]//g' passwd.fake | grep -v '^$' | sort -u >> Assignment3.txt
+[yelinsp24@sjsu Assignment3]$ vi Assignment3.txt
+[yelinsp24@sjsu Assignment3]$ vi cmds.log
+[yelinsp24@sjsu Assignment3]$ ls
+Assignment3.txt  cmds.log  last.fake  lastsp24.fake  passwd.fake  ps.fake
