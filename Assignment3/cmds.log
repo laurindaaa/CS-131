@@ -220,10 +220,11 @@ amansp24
 [yelinsp24@sjsu Assignment3]$ wc -l last.fake >> Assignment3.txt
 [yelinsp24@sjsu Assignment3]$ grep 'sp24' last.fake > lastsp24.fake
 [yelinsp24@sjsu Assignment3]$ wc -l lastsp24.fake >> Assignment3.txt
-[yelinsp24@sjsu Assignment3]$ grep 'Sun' lastsp24.fake | awk '{print $1}' | sort | uniq | awk 'BEGIN { printf "The list of people who worked on Sunday are:\n" } { printf "%s\n", $0 } END { printf "Kudos to these people for putting in the work\n" }' >> Assignment3.txt
-[yelinsp24@sjsu Assignment3]$ awk '$6 ~ /11:|12:|01:|02:|03:|04:/ {print $1}' lastsp24.fake | sort | uniq | awk 'BEGIN { printf "Night Owls List:\n" } { printf "%s\n", $0 } END { printf "Night Owls are dope. Please ensure you get enough sleep though.\n" }' >> Assignment3.txt
-[yelinsp24@sjsu Assignment3]$ awk '$6 ~ /0[5-9]:/ {print $1}' lastsp24.fake | sort | uniq | awk 'BEGIN { printf "Early Birds List:\n" } { printf "%s\n", $0 } END { printf "Early Birds are dope. Please ensure you get enough sleep though.\n" }' >> Assignment3.txt
+[yelinsp24@sjsu Assignment3]$ grep 'Sun' lastsp24.fake | awk '{print $1}' | sort | uniq | awk 'BEGIN {print "The list of people who worked on Sunday are:"} {print $0} END{print "Kudos to these people for putting in the work"}' >> Assignment3.txt 
+[yelinsp24@sjsu Assignment3]awk -F: '{print $1}' lastsp24.fake | awk '$7 >= 23 || $7 <= 4 {print $1}' | sort | uniq | awk 'BEGIN {print "Night Owls List:"}{print $0} END{print"Night Owls are dope. Please ensure you get enough sleep though."}'' >> Assignment3.txt
+[yelinsp24@sjsu Assignment3]awk -F: '{print $1}' lastsp24.fake | awk '$7 >= 5 && $7 <= 9 {print $1}' | sort | uniq | awk 'BEGIN {print "Early Birds List:"}{print $0} END{print"Early Birds are dope. Please ensure you get enough sleep though."}' >> Assignment3.txt
 [yelinsp24@sjsu Assignment3]$ awk '$1 ~ /^t/ {print $1}' lastsp24.fake >> Assignment3.txt
+[yelinsp24@sjsu Assignment3]awk '$1 ~ /^t/ {print $1}' lastsp24.fake | sort | uniq >> Assignment3.txt
 [yelinsp24@sjsu Assignment3]$ awk -F: '$1 ~ /^a/ && $3 % 2 == 0 {print $1}' passwd.fake >> Assignment3.txt
 [yelinsp24@sjsu Assignment3]$ sed 's/[[:alpha:][:digit:] ]//g' passwd.fake | grep -v '^$' | sort -u >> Assignment3.txt
 [yelinsp24@sjsu Assignment3]$ vi Assignment3.txt
