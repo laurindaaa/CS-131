@@ -7,6 +7,9 @@ wc -l last.fake
 Output of Command: 
 507 last.fake
 
+Command used to solve "make the file only have "sp24" in "lastsp24.fake" file:
+awk '/sp24/' last.fake > lastsp24.fake
+
 Command(s) used to solve:
 1. get the number of lines in last.fake after filtering
 wc -l lastsp24.fake
